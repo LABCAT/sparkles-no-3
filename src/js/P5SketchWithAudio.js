@@ -59,7 +59,7 @@ const P5SketchWithAudio = () => {
             }
         } 
 
-        p.numOfLoops = 2000;
+        p.numOfLoops = 1688;
 
         p.vx = new Array(p.numOfLoops);
         p.vy = new Array(p.numOfLoops);
@@ -81,9 +81,9 @@ const P5SketchWithAudio = () => {
         p.hueRangeMin = p.random(p.hueOptions);
         p.hueRangeMax = p.hueRangeMin + 30;
 
-        p.magnetism = 444.0;
+        p.magnetism = 88.0;
         
-        p.radius = 1;
+        p.radius = 1.5;
         p.gensoku = 0.95; // principle
 
         p.setup = () => {
@@ -139,7 +139,8 @@ const P5SketchWithAudio = () => {
 
         p.executeCueSet1 = (note) => {
             const { currentCue } = note;
-            if(currentCue % 4 === 1) {
+            console.log(currentCue);
+            if(currentCue % 2 && currentCue < 18) {
                 p.clear();
             }
             p.touchX = p.random(0, p.width);
