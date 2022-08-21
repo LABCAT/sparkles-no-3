@@ -150,29 +150,6 @@ const P5SketchWithAudio = () => {
             p.magnetism = p.random(88, 444);
         }
 
-        p.coOrds = [];
-
-        p.generateCoOrds = () => {
-            p.coOrds = [];
-            for (let i = 0; i < 2; i++) {
-                p.coOrds.push(
-                    {
-                        x: p.random((p.width / 2) * i, (p.width / 2) * i + (p.width / 2)),
-                        y: p.random(0, (p.height / 2))
-                    }
-                )
-            }
-            for (let i = 0; i < 2; i++) {
-                p.coOrds.push(
-                    {
-                        x: p.random((p.width / 2) * i, (p.width / 2) * i + (p.width / 2)),
-                        y: p.random((p.height / 2), p.height)
-                    }
-                )
-            }
-            p.coOrds = p.shuffle(p.coOrds);
-        }
-
         p.hasStarted = false;
 
         p.mousePressed = () => {
